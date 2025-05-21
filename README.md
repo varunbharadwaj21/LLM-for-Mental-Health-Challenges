@@ -1,6 +1,6 @@
-# LLM Fine-Tuning and Trail Scripts
+# Leveraging LLM for Mental Health Challenges
 
-This repository contains Jupyter Notebooks and converted Python scripts for:
+This repository contains Jupyter Notebooks and  Python scripts for:
 - Fine-tuning language models
 - Saving and loading model checkpoints
 - Running model interfaces locally
