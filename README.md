@@ -5,7 +5,7 @@ This repository contains Jupyter Notebooks and converted Python scripts for:
 - Saving and loading model checkpoints
 - Running model interfaces locally
   
-#🧠 **Project Insight: Emotion Recognition Using Deep Learning**
+🧠 **Project Insight: Emotion Recognition Using Deep Learning**
 This project addresses the increasingly important role of emotion recognition in enhancing mental health diagnosis, communication systems, and AI-human interactions. Traditional emotion recognition methods rely on isolated data streams like facial expressions or voice tones, which often fail to grasp the full emotional context. Our project innovates by leveraging deep learning and multimodal data integration to create a scalable and accurate emotion recognition system.
 
 The system is designed to process and analyze text, facial expressions, and voice data to detect emotional states such as happiness, sadness, anxiety, and anger. This multimodal approach provides a more holistic understanding of a person’s emotional profile and offers real-time insights—especially useful in mental health monitoring and therapy support. Unlike many existing models, which operate in silos, this system integrates various data sources to improve reliability and diagnostic power.
