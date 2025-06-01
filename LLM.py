@@ -57,7 +57,7 @@ combined_df.drop_duplicates(inplace=True)
 
 # Save
 combined_df.to_json("mental_health_combined.json", orient="records", lines=True)
-print(f"✅ Done! Saved {len(combined_df)} cleaned examples to 'mental_health_combined.json'")
+print(f"Done! Saved {len(combined_df)} cleaned examples to 'mental_health_combined.json'")
 
 
 # In[3]:
@@ -248,7 +248,7 @@ model = GPT2LMHeadModel.from_pretrained(
 # In[ ]:
 
 
-# ✅ Load fine-tuned GPT2 model and tokenizer
+#  Load fine-tuned GPT2 model and tokenizer
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 tokenizer = GPT2Tokenizer.from_pretrained(
@@ -416,19 +416,19 @@ def mental_health_chat(user_input):
             input_ids,
             max_length=150,
             pad_token_id=tokenizer.eos_token_id,
-            no_repeat_ngram_size=3,       # ✅ Prevent repeating n-grams
-            repetition_penalty=1.2,       # ✅ Penalize repeating words
-            temperature=0.9,              # ✅ Encourage variety
-            top_k=50,                     # ✅ Sample from top 50 tokens
-            top_p=0.95,                   # ✅ Nucleus sampling
-            do_sample=True                # ✅ Enable randomness
+            no_repeat_ngram_size=3,       # Prevent repeating n-grams
+            repetition_penalty=1.2,       # Penalize repeating words
+            temperature=0.9,              # Encourage variety
+            top_k=50,                     # Sample from top 50 tokens
+            top_p=0.95,                   # Nucleus sampling
+            do_sample=True                # Enable randomness
         )
         response = tokenizer.decode(output[0], skip_special_tokens=True).replace(prompt, "").strip()
 
         return response, f"💬 Detected Emotion: **{emotion_hint}**\n\n🔍 Top Predictions:\n{emotion_summary}"
 
     except Exception as e:
-        return f"❌ Error: {str(e)}", "⚠️ Emotion detection failed"
+        return f"Error: {str(e)}", "⚠️ Emotion detection failed"
 
 # === Launch Gradio App ===
 gr.Interface(
@@ -439,10 +439,10 @@ gr.Interface(
         label="🗣️ Tell me what’s on your mind"
     ),
     outputs=[
-        gr.Textbox(label="🧠 AI Response"),
-        gr.Textbox(label="🎭 Emotion Analysis")
+        gr.Textbox(label="AI Response"),
+        gr.Textbox(label="Emotion Analysis")
     ],
-    title="🧠 Mental Health LLM Companion",
+    title="Mental Health LLM Companion",
     description="This tool provides empathetic AI responses and detects emotional tone. Not a substitute for professional help."
 ).launch()
 
@@ -519,7 +519,7 @@ def mental_health_chat(user_input):
         response = raw_response.replace(prompt, '').strip()
         return clean_response(response), f"💬 Detected Emotion: **{emotion_hint}**\n\n🔍 Top Predictions:\n{emotion_summary}"
     except Exception as e:
-        return f"❌ Error: {str(e)}", "⚠️ Emotion detection failed"
+        return f" Error: {str(e)}", "⚠️ Emotion detection failed"
 
 
 # In[ ]:
