@@ -148,21 +148,12 @@ training_args = TrainingArguments(
 )
 
 
-# In[30]:
-
-
 # Trainer: Hugging Face's API for fine-tuning
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_dataset,
 )
-
-
-# # Fine tuning the model
-
-# In[ ]:
-
 
 trainer.train()
 
