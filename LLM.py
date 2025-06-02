@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[1]:
-
-
 from datasets import load_dataset
 
 ds1 = load_dataset("Amod/mental_health_counseling_conversations", split="train")
@@ -16,7 +14,6 @@ print("🧾 Dataset 3 Columns:", ds3.column_names)
 
 
 # In[2]:
-
 
 from datasets import load_dataset
 import pandas as pd
@@ -76,8 +73,6 @@ print(f"Loaded {len(dataset)} entries.")
 
 
 # In[4]:
-
-
 import json
 
 # Load your merged dataset
