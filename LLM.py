@@ -99,8 +99,7 @@ print(f"Using device: {device}")
 
 
 # In[6]:
-
-
+# Install hugging face if not installed
 pip install huggingface_hub[hf_xet]
 
 
